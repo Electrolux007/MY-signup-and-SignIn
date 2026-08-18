@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="auth-card" aria-labelledby="page-title">
+    <header class="brand">
+      <div class="brand__logo" aria-hidden="true">A</div>
+      <h1 id="page-title">Welcome back</h1>
+      <p>Sign in to continue to your account.</p>
+    </header>
+
+    <form id="signin-form" class="auth-form">
+      <div class="form-field">
+        <label for="signin-email">Email address</label>
+        <input id="signin-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="form-field">
+        <label for="signin-password">Password</label>
+        <input id="signin-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+      </div>
+      <div class="form-row">
+        <label class="checkbox-label" for="remember-me">
+          <input id="remember-me" name="remember-me" type="checkbox">
+          Remember me
+        </label>
+        <a id="forgot-password-link" href="#">Forgot password?</a>
+      </div>
+      <button id="signin-submit-button" class="submit-button" type="submit">Sign in</button>
+      <p class="auth-link">Need an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </main>
+</body>
+<script src="./script.js" defer></script>
+</html>
