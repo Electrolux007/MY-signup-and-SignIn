@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="auth-card" aria-labelledby="page-title">
+        <header class="brand">
+            <div class="brand__logo" aria-hidden="true">A</div>
+            <h1 id="page-title">Create an account</h1>
+            <p>Create an account to get started.</p>
+        </header>
+
+        <form id="signup-form" class="auth-form">
+            <div class="form-field">
+                <label for="signup-name">Full name</label>
+                <input id="signup-name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required maxlength="12">
+            </div>
+            <div class="form-field">
+                <label for="signup-email">Email address</label>
+                <input id="signup-email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+                    required>
+            </div>
+            <div class="form-field">
+                <label for="signup-password">Password</label>
+                <input id="signup-password" name="password" type="password" placeholder="Create a password"
+                    autocomplete="new-password" required maxlength="8">
+            </div>
+            <div class="form-field">
+                <label for="signup-confirm-password">Confirm password</label>
+                <input id="signup-confirm-password" name="confirm-password" type="password"
+                    placeholder="Repeat your password" autocomplete="new-password" required>
+            </div>
+            <!-- <label class="checkbox-label" for="signup-terms">
+                <input id="signup-terms" name="terms" type="checkbox" required>
+                I agree to the terms and conditions
+            </label> -->
+            <button id="signup-submit-button" class="submit-button" type="submit">Create account</button>
+            <p class="auth-link">Already have an account? <a href="signin.html">Sign in</a></p>
+        </form>
+    </main>
+</body>
+<script src="./script.js" defer></script>
+</html>
