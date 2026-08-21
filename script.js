@@ -78,17 +78,19 @@ signInButton?.addEventListener("click",function(){
 const verfifylogIn = () =>{
     let userEmail = document.getElementById("signin-email").value
     let userPassword = document.getElementById("signin-password").value    
-    checkDatabaseLogin(userEmail, userPassword)
-    document.getElementById("signin-submit-button").innerHTML = `<span class="loader"></span> Logging you in...`;
-                setTimeout(() => {
-                document.body.classList.add("page-exit");
-                }, 1100);
-                setTimeout(() => {
-                window.location.href = "./dashboard.html";
-                }, 1500);
-                setTimeout(() => {
-                    window.location.href = './dashboard.html';
-                        }, 2000);
+    let isValid = checkDatabaseLogin(userEmail, userPassword)
+    if (isValid) {     
+        document.getElementById("signin-submit-button").innerHTML = `<span class="loader"></span> Logging you in...`;
+                    setTimeout(() => {
+                    document.body.classList.add("page-exit");
+                    }, 1100);
+                    setTimeout(() => {
+                    window.location.href = "./dashboard.html";
+                    }, 1500);
+                    setTimeout(() => {
+                        window.location.href = './dashboard.html';
+                            }, 2000);
+    } 
 }
 
 const checkDatabaseLogin = (userEmail, userPassword) =>{
